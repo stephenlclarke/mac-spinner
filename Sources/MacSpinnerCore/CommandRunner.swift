@@ -17,20 +17,40 @@ public enum CommandRunner {
         let output = try FileHandle(forWritingTo: URL(fileURLWithPath: outputPath))
         defer { try? output.close() }
 
+        let executable = try resolveExecutable(command[0])
         let process = Process()
-        process.executableURL = URL(fileURLWithPath: "/usr/bin/env")
-        process.arguments = command
+        process.executableURL = URL(fileURLWithPath: executable)
+        process.arguments = Array(command.dropFirst())
         process.standardOutput = output
         process.standardError = output
         try process.run()
         process.waitUntilExit()
         return process.terminationStatus
     }
+
+    private static func resolveExecutable(_ command: String) throws -> String {
+        if command.contains("/") {
+            return command
+        }
+
+        let searchPath = ProcessInfo.processInfo.environment["PATH"] ?? ""
+        for directory in searchPath.split(separator: ":", omittingEmptySubsequences: false) {
+            let candidate = URL(fileURLWithPath: String(directory), isDirectory: true)
+                .appendingPathComponent(command)
+                .path
+            if FileManager.default.isExecutableFile(atPath: candidate) {
+                return candidate
+            }
+        }
+
+        throw CommandRunnerError.executableNotFound(command)
+    }
 }
 
 public enum CommandRunnerError: Error, Equatable, CustomStringConvertible {
     case emptyCommand
     case cannotCreateOutput(String)
+    case executableNotFound(String)
 
     public var description: String {
         switch self {
@@ -38,6 +58,8 @@ public enum CommandRunnerError: Error, Equatable, CustomStringConvertible {
             "command is empty"
         case let .cannotCreateOutput(path):
             "cannot create output file: \(path)"
+        case let .executableNotFound(command):
+            "executable not found in PATH: \(command)"
         }
     }
 }
