@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2026 Stephen Clarke
+
 import Darwin
 import Foundation
 import MacSpinnerCore

@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2026 Stephen Clarke
+
 public enum SpinnerRenderer {
     public static let frames = [
         "\u{2813}", "\u{280B}", "\u{2819}", "\u{281A}", "\u{2816}",

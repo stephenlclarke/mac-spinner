@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Stephen Clarke
+
 .PHONY: build test coverage leak-check demo icon
 
 build:

@@ -1,4 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="105" height="20" viewBox="0 0 105 20" role="img" aria-label="License: MIT">
+  <!-- SPDX-License-Identifier: MIT -->
+  <!-- Copyright (c) 2026 Stephen Clarke -->
   <title>License: MIT</title>
   <defs>
     <linearGradient id="shine" x2="0" y2="100%">

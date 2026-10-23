@@ -1,4 +1,7 @@
 #!/bin/bash
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Stephen Clarke
+
 set -euo pipefail
 
 if [[ $# -ne 1 || ! -x "$1" ]]; then

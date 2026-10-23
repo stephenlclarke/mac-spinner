@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Stephen Clarke
+
 Output demo/spinner.gif
 Set Shell zsh
 Set FontSize 18

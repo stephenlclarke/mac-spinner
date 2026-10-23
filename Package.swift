@@ -1,4 +1,6 @@
 // swift-tools-version: 6.0
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2026 Stephen Clarke
 
 import PackageDescription
 
