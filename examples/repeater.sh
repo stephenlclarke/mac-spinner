@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # SPDX-License-Identifier: MIT
-# Copyright (c) 2026 Stephen Clarke
+# SPDX-FileCopyrightText: 2026 Stephen Clarke <stephenlclarke@mac.com> - https://github.com/stephenlclarke/mac-spinner
 # USAGE: repeater.sh [-p|--pause INTERVAL] [--] COMMAND [ARG...]
 # Run a command immediately, then repeat it until interrupted with Ctrl+C.
 
