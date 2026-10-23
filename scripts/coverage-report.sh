@@ -4,8 +4,8 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT_DIR"
 
-TEST_BINARY="$(find .build -path '*MacSpinnerCoreTests.xctest/Contents/MacOS/MacSpinnerCoreTests' -type f -print -quit)"
-PROFILE="$(find .build -path '*/codecov/default.profdata' -type f -print -quit)"
+TEST_BINARY="$(find .build -path '*/Contents/MacOS/*Tests' -type f -print -quit)"
+PROFILE="$(find .build -name default.profdata -type f -print -quit)"
 if [[ -z "$TEST_BINARY" || -z "$PROFILE" ]]; then
   printf 'Coverage data not found. Run swift test --enable-code-coverage first.\n' >&2
   exit 1

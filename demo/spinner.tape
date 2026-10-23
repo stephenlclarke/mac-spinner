@@ -1,7 +1,7 @@
 Output demo/spinner.gif
 Set Shell zsh
 Set FontSize 18
-Set Width 860
+Set Columns 80
 Set Height 180
 Set Theme "Catppuccin Mocha"
 Hide
