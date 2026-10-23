@@ -7,6 +7,9 @@
 [![Release](https://img.shields.io/github/v/release/stephenlclarke/mac-spinner)](https://github.com/stephenlclarke/mac-spinner/releases)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=stephenlclarke_mac-spinner&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=stephenlclarke_mac-spinner)
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=stephenlclarke_mac-spinner&metric=bugs)](https://sonarcloud.io/summary/new_code?id=stephenlclarke_mac-spinner)
+[![Maintainability Issues](https://sonarcloud.io/api/project_badges/measure?project=stephenlclarke_mac-spinner&metric=software_quality_maintainability_issues)](https://sonarcloud.io/summary/new_code?id=stephenlclarke_mac-spinner)
+[![Reliability Issues](https://sonarcloud.io/api/project_badges/measure?project=stephenlclarke_mac-spinner&metric=software_quality_reliability_issues)](https://sonarcloud.io/summary/new_code?id=stephenlclarke_mac-spinner)
+[![Security Issues](https://sonarcloud.io/api/project_badges/measure?project=stephenlclarke_mac-spinner&metric=software_quality_security_issues)](https://sonarcloud.io/summary/new_code?id=stephenlclarke_mac-spinner)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=stephenlclarke_mac-spinner&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=stephenlclarke_mac-spinner)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=stephenlclarke_mac-spinner&metric=coverage)](https://sonarcloud.io/summary/new_code?id=stephenlclarke_mac-spinner)
 [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=stephenlclarke_mac-spinner&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=stephenlclarke_mac-spinner)
@@ -16,7 +19,6 @@
 [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=stephenlclarke_mac-spinner&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=stephenlclarke_mac-spinner)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=stephenlclarke_mac-spinner&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=stephenlclarke_mac-spinner)
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=stephenlclarke_mac-spinner&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=stephenlclarke_mac-spinner)
-[![Security Hotspots Reviewed](https://sonarcloud.io/api/project_badges/measure?project=stephenlclarke_mac-spinner&metric=security_hotspots_reviewed)](https://sonarcloud.io/summary/new_code?id=stephenlclarke_mac-spinner)
 [![License: MIT](https://img.shields.io/badge/MIT-License%20%E2%9A%96-blue.svg)](LICENSE)
 
 A small native macOS spinner for shell scripts. It keeps the spinner in a separate process, so the command output can be captured without disturbing the animation.
