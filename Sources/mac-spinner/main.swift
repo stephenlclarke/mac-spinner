@@ -28,15 +28,31 @@ private func colourEnabled() -> Bool {
     return !disabledValues.contains(ProcessInfo.processInfo.environment["SCRIPT_COLOUR"] ?? "")
 }
 
+private func restoreCursor() {
+    guard isatty(STDOUT_FILENO) == 1 else { return }
+    let sequence = Array("\u{001B}[?25h".utf8)
+    sequence.withUnsafeBytes { bytes in
+        _ = Darwin.write(STDOUT_FILENO, bytes.baseAddress!, bytes.count)
+    }
+}
+
 private func spin(message: String) -> Never {
-    signal(SIGTERM) { _ in Darwin.exit(0) }
-    signal(SIGINT) { _ in Darwin.exit(0) }
+    signal(SIGTERM) { _ in
+        restoreCursor()
+        Darwin.exit(0)
+    }
+    signal(SIGINT) { _ in
+        restoreCursor()
+        Darwin.exit(0)
+    }
 
     guard isatty(STDOUT_FILENO) == 1 else {
         print(SpinnerRenderer.pending(message: message))
         while true { usleep(100_000) }
     }
 
+    let hideCursor = "\u{001B}[?25l"
+    hideCursor.withCString { _ = fputs($0, stdout) }
     let firstFrame = SpinnerRenderer.frame(at: 0)
     print(SpinnerRenderer.spinnerLine(frame: firstFrame, message: message, colour: colourEnabled()), terminator: "")
     fflush(stdout)
