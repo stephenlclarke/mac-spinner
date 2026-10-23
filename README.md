@@ -19,7 +19,7 @@
 [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=stephenlclarke_mac-spinner&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=stephenlclarke_mac-spinner)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=stephenlclarke_mac-spinner&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=stephenlclarke_mac-spinner)
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=stephenlclarke_mac-spinner&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=stephenlclarke_mac-spinner)
-[![License: MIT](https://img.shields.io/badge/MIT-License%20%E2%9A%96-blue.svg)](LICENSE)
+[![License: MIT](assets/license-badge.svg)](LICENSE)
 
 A small native macOS spinner for shell scripts. It keeps the spinner in a separate process, so the command output can be captured without disturbing the animation.
 

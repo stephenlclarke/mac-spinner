@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="105" height="20" viewBox="0 0 105 20" role="img" aria-label="License: MIT">
+  <title>License: MIT</title>
+  <defs>
+    <linearGradient id="shine" x2="0" y2="100%">
+      <stop offset="0" stop-color="#fff" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="round">
+      <rect width="105" height="20" rx="3"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#round)">
+    <path fill="#555" d="M0 0h72v20H0z"/>
+    <path fill="#007ec6" d="M72 0h33v20H72z"/>
+    <path fill="url(#shine)" d="M0 0h105v20H0z"/>
+  </g>
+  <g fill="#fff" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="11" text-anchor="middle">
+    <text x="25" y="14">License</text>
+    <text x="88.5" y="14" font-weight="bold">MIT</text>
+  </g>
+  <g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1">
+    <path d="M59 3.5v11m-6-7h12m-9 0-2.8 5m8.6-5 2.8 5M56 14.5h6m-8.8-2h5.6c-.3 1.5-1.2 2.2-2.8 2.2S53.1 14 52.8 12.5Zm9 0h5.6c-.3 1.5-1.2 2.2-2.8 2.2s-2.5-.7-2.8-2.2Z"/>
+    <path d="M57 16h4m-5 1.5h6"/>
+  </g>
+</svg>
