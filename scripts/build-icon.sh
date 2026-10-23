@@ -18,6 +18,6 @@ sips -z 256 256 /tmp/mac-spinner-icon-1024.png --out Icon.iconset/icon_256x256.p
 sips -z 512 512 /tmp/mac-spinner-icon-1024.png --out Icon.iconset/icon_256x256@2x.png >/dev/null
 sips -z 512 512 /tmp/mac-spinner-icon-1024.png --out Icon.iconset/icon_512x512.png >/dev/null
 sips -z 1024 1024 /tmp/mac-spinner-icon-1024.png --out Icon.iconset/icon_512x512@2x.png >/dev/null
-iconutil -c icns Icon.iconset -o assets/mac-spinner.icns
+iconutil -c icns Icon.iconset -o assets/mac-spinner-icon.icns
 cp /tmp/mac-spinner-icon-1024.png assets/mac-spinner-icon.png
 rm /tmp/mac-spinner-icon-1024.png
