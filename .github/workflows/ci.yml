@@ -1,6 +1,7 @@
 # SPDX-License-Identifier: MIT
 # SPDX-FileCopyrightText: 2026 Stephen Clarke <stephenlclarke@mac.com> - https://github.com/stephenlclarke/mac-spinner
 
+# Run coverage, leak checks, and Sonar analysis for main and pull requests.
 name: CI
 
 on:
@@ -13,6 +14,7 @@ permissions:
   contents: read
 
 jobs:
+  # Build and validate the application on macOS before uploading its coverage report.
   test:
     runs-on: macos-15
     steps:
@@ -26,6 +28,7 @@ jobs:
         with:
           name: sonar-coverage
           path: coverage.xml
+  # Analyze only after the coverage artifact is available from the test job.
   sonar:
     needs: test
     if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.fork == false

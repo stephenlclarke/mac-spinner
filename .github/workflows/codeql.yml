@@ -1,6 +1,7 @@
 # SPDX-License-Identifier: MIT
 # SPDX-FileCopyrightText: 2026 Stephen Clarke <stephenlclarke@mac.com> - https://github.com/stephenlclarke/mac-spinner
 
+# Run GitHub CodeQL analysis for changes, scheduled scans, and manual requests.
 name: CodeQL
 
 on:
@@ -15,6 +16,7 @@ permissions:
   contents: read
 
 jobs:
+  # Initialise Swift analysis, let CodeQL build the package, then publish results.
   analyze:
     name: Analyze Swift
     runs-on: macos-15

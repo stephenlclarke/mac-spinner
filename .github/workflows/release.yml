@@ -1,6 +1,7 @@
 # SPDX-License-Identifier: MIT
 # SPDX-FileCopyrightText: 2026 Stephen Clarke <stephenlclarke@mac.com> - https://github.com/stephenlclarke/mac-spinner
 
+# Build architecture-specific archives and publish them when a version tag is pushed.
 name: Release
 
 on:
@@ -11,6 +12,7 @@ permissions:
   contents: write
 
 jobs:
+  # Compile and package one archive for each supported Mac architecture.
   build:
     strategy:
       matrix:
@@ -26,14 +28,17 @@ jobs:
         run: swift build -c release
       - name: Package binary
         run: |
+          # Stage the executable under the architecture-specific archive layout.
           mkdir -p "stage/mac-spinner-${{ matrix.arch }}/bin"
           install -m 0755 .build/release/mac-spinner "stage/mac-spinner-${{ matrix.arch }}/bin/mac-spinner"
+          # Create the distributable archive and record its SHA-256 checksum.
           tar -C stage -czf "mac-spinner-${{ matrix.arch }}.tar.gz" "mac-spinner-${{ matrix.arch }}"
           shasum -a 256 "mac-spinner-${{ matrix.arch }}.tar.gz" > "mac-spinner-${{ matrix.arch }}.tar.gz.sha256"
       - uses: actions/upload-artifact@v4
         with:
           name: mac-spinner-${{ matrix.arch }}
           path: mac-spinner-${{ matrix.arch }}.tar.gz*
+  # Combine both architecture artifacts into the tagged GitHub release.
   publish:
     needs: build
     runs-on: macos-15
