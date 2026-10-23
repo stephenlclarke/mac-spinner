@@ -1,25 +1,29 @@
 # mac-spinner
 
-<img src="assets/mac-spinner-icon.png" alt="mac-spinner icon" width="160">
-
-[![CI](https://github.com/stephenlclarke/mac-spinner/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/stephenlclarke/mac-spinner/actions/workflows/ci.yml)
-[![CodeQL](https://github.com/stephenlclarke/mac-spinner/actions/workflows/codeql.yml/badge.svg?branch=main)](https://github.com/stephenlclarke/mac-spinner/actions/workflows/codeql.yml)
-[![Release](https://img.shields.io/github/v/release/stephenlclarke/mac-spinner)](https://github.com/stephenlclarke/mac-spinner/releases)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=stephenlclarke_mac-spinner&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=stephenlclarke_mac-spinner)
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=stephenlclarke_mac-spinner&metric=bugs)](https://sonarcloud.io/summary/new_code?id=stephenlclarke_mac-spinner)
-[![Maintainability Issues](https://sonarcloud.io/api/project_badges/measure?project=stephenlclarke_mac-spinner&metric=software_quality_maintainability_issues)](https://sonarcloud.io/summary/new_code?id=stephenlclarke_mac-spinner)
-[![Reliability Issues](https://sonarcloud.io/api/project_badges/measure?project=stephenlclarke_mac-spinner&metric=software_quality_reliability_issues)](https://sonarcloud.io/summary/new_code?id=stephenlclarke_mac-spinner)
-[![Security Issues](https://sonarcloud.io/api/project_badges/measure?project=stephenlclarke_mac-spinner&metric=software_quality_security_issues)](https://sonarcloud.io/summary/new_code?id=stephenlclarke_mac-spinner)
-[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=stephenlclarke_mac-spinner&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=stephenlclarke_mac-spinner)
-[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=stephenlclarke_mac-spinner&metric=coverage)](https://sonarcloud.io/summary/new_code?id=stephenlclarke_mac-spinner)
-[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=stephenlclarke_mac-spinner&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=stephenlclarke_mac-spinner)
-[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=stephenlclarke_mac-spinner&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=stephenlclarke_mac-spinner)
-[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=stephenlclarke_mac-spinner&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=stephenlclarke_mac-spinner)
-[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=stephenlclarke_mac-spinner&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=stephenlclarke_mac-spinner)
-[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=stephenlclarke_mac-spinner&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=stephenlclarke_mac-spinner)
-[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=stephenlclarke_mac-spinner&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=stephenlclarke_mac-spinner)
-[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=stephenlclarke_mac-spinner&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=stephenlclarke_mac-spinner)
-[![License: MIT](assets/license-badge.svg)](LICENSE)
+<!-- markdownlint-disable MD033 -->
+<p>
+  <img align="left" hspace="20" src="assets/mac-spinner-icon.png" width="147" alt="mac-spinner application icon" />
+  <a href="https://github.com/stephenlclarke/mac-spinner/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/stephenlclarke/mac-spinner/actions/workflows/ci.yml/badge.svg?branch=main" /></a>
+  <a href="https://github.com/stephenlclarke/mac-spinner/actions/workflows/codeql.yml"><img alt="CodeQL" src="https://github.com/stephenlclarke/mac-spinner/actions/workflows/codeql.yml/badge.svg?branch=main" /></a>
+  <a href="https://github.com/stephenlclarke/mac-spinner/releases"><img alt="Release" src="https://img.shields.io/github/v/release/stephenlclarke/mac-spinner" /></a>
+  <a href="https://sonarcloud.io/summary/new_code?id=stephenlclarke_mac-spinner"><img alt="Quality Gate Status" src="https://sonarcloud.io/api/project_badges/measure?project=stephenlclarke_mac-spinner&amp;metric=alert_status" /></a>
+  <a href="https://sonarcloud.io/summary/new_code?id=stephenlclarke_mac-spinner"><img alt="Bugs" src="https://sonarcloud.io/api/project_badges/measure?project=stephenlclarke_mac-spinner&amp;metric=bugs" /></a>
+  <a href="https://sonarcloud.io/summary/new_code?id=stephenlclarke_mac-spinner"><img alt="Maintainability Issues" src="https://sonarcloud.io/api/project_badges/measure?project=stephenlclarke_mac-spinner&amp;metric=software_quality_maintainability_issues" /></a>
+  <a href="https://sonarcloud.io/summary/new_code?id=stephenlclarke_mac-spinner"><img alt="Reliability Issues" src="https://sonarcloud.io/api/project_badges/measure?project=stephenlclarke_mac-spinner&amp;metric=software_quality_reliability_issues" /></a>
+  <a href="https://sonarcloud.io/summary/new_code?id=stephenlclarke_mac-spinner"><img alt="Security Issues" src="https://sonarcloud.io/api/project_badges/measure?project=stephenlclarke_mac-spinner&amp;metric=software_quality_security_issues" /></a>
+  <a href="https://sonarcloud.io/summary/new_code?id=stephenlclarke_mac-spinner"><img alt="Code Smells" src="https://sonarcloud.io/api/project_badges/measure?project=stephenlclarke_mac-spinner&amp;metric=code_smells" /></a>
+  <a href="https://sonarcloud.io/summary/new_code?id=stephenlclarke_mac-spinner"><img alt="Coverage" src="https://sonarcloud.io/api/project_badges/measure?project=stephenlclarke_mac-spinner&amp;metric=coverage" /></a>
+  <a href="https://sonarcloud.io/summary/new_code?id=stephenlclarke_mac-spinner"><img alt="Duplicated Lines (%)" src="https://sonarcloud.io/api/project_badges/measure?project=stephenlclarke_mac-spinner&amp;metric=duplicated_lines_density" /></a>
+  <a href="https://sonarcloud.io/summary/new_code?id=stephenlclarke_mac-spinner"><img alt="Lines of Code" src="https://sonarcloud.io/api/project_badges/measure?project=stephenlclarke_mac-spinner&amp;metric=ncloc" /></a>
+  <a href="https://sonarcloud.io/summary/new_code?id=stephenlclarke_mac-spinner"><img alt="Reliability Rating" src="https://sonarcloud.io/api/project_badges/measure?project=stephenlclarke_mac-spinner&amp;metric=reliability_rating" /></a>
+  <a href="https://sonarcloud.io/summary/new_code?id=stephenlclarke_mac-spinner"><img alt="Security Rating" src="https://sonarcloud.io/api/project_badges/measure?project=stephenlclarke_mac-spinner&amp;metric=security_rating" /></a>
+  <a href="https://sonarcloud.io/summary/new_code?id=stephenlclarke_mac-spinner"><img alt="Technical Debt" src="https://sonarcloud.io/api/project_badges/measure?project=stephenlclarke_mac-spinner&amp;metric=sqale_index" /></a>
+  <a href="https://sonarcloud.io/summary/new_code?id=stephenlclarke_mac-spinner"><img alt="Maintainability Rating" src="https://sonarcloud.io/api/project_badges/measure?project=stephenlclarke_mac-spinner&amp;metric=sqale_rating" /></a>
+  <a href="https://sonarcloud.io/summary/new_code?id=stephenlclarke_mac-spinner"><img alt="Vulnerabilities" src="https://sonarcloud.io/api/project_badges/measure?project=stephenlclarke_mac-spinner&amp;metric=vulnerabilities" /></a>
+  <a href="LICENSE"><img alt="License: MIT" src="assets/license-badge.svg" /></a>
+</p>
+<br clear="left" />
+<!-- markdownlint-enable MD033 -->
 
 A small native macOS spinner for shell scripts. It keeps the spinner in a separate process, so the command output can be captured without disturbing the animation.
 
