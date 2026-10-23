@@ -1,0 +1,47 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        include:
+          - runner: macos-15
+            arch: arm64
+          - runner: macos-15-intel
+            arch: x86_64
+    runs-on: ${{ matrix.runner }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build release binary
+        run: swift build -c release
+      - name: Package binary
+        run: |
+          mkdir -p "stage/mac-spinner-${{ matrix.arch }}/bin"
+          install -m 0755 .build/release/mac-spinner "stage/mac-spinner-${{ matrix.arch }}/bin/mac-spinner"
+          tar -C stage -czf "mac-spinner-${{ matrix.arch }}.tar.gz" "mac-spinner-${{ matrix.arch }}"
+          shasum -a 256 "mac-spinner-${{ matrix.arch }}.tar.gz" > "mac-spinner-${{ matrix.arch }}.tar.gz.sha256"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mac-spinner-${{ matrix.arch }}
+          path: mac-spinner-${{ matrix.arch }}.tar.gz*
+  publish:
+    needs: build
+    runs-on: macos-15
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+          pattern: mac-spinner-*
+          merge-multiple: true
+      - name: Publish GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.ref_name }}
+        run: gh release create "$TAG" artifacts/* --repo "${GITHUB_REPOSITORY}" --generate-notes --title "$TAG"

@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run tests and enforce coverage
+        run: make coverage
+      - name: Check for memory leaks
+        run: make leak-check
+      - name: Upload coverage for SonarQube
+        uses: actions/upload-artifact@v4
+        with:
+          name: sonar-coverage
+          path: coverage.xml
+  sonar:
+    needs: test
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.fork == false
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: sonar-coverage
+      - uses: SonarSource/sonarqube-scan-action@v5
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}

@@ -1,0 +1,6 @@
+.build/
+.scannerwork/
+.DS_Store
+coverage.lcov
+coverage.xml
+Icon.iconset/*.png
